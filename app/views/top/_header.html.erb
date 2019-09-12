@@ -1,0 +1,8 @@
+<%= image_tag "toplogo.png",size: "300x120",  alt: "そうおん部室予約サイト" %>
+<nav class="menubar">
+  <ul>
+    <%= link_to_unless_current "Home", root_path %>
+    <%= link_to_unless_current "イベント編集/バンド練予約", events_path %>
+    <%= link_to_unless_current "このサイトについて", top_about_path %>
+  </ul>
+</nav>

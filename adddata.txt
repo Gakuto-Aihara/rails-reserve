@@ -1,0 +1,12 @@
+scaffoldについて
+rails g scaffold (モデル名) カラム名:データ型, (モデル名) カラム名:データ型......
+でモデル、コントローラー、ビューとかだいたい一式作ってくれる
+
+データ投入について
+モデル[event]に新しく要素を追加するとき
+event = Event.new(title: "fes", start: Time.zone.local(2019, 11, 2, 9, 0, 0).in_time_zone, end: Time.zone.local(2019, 11, 2, 23, 0, 0))
+
+時間表記
+Time.zone.local(xxxx年, mm月, dd日, hh時, mm分, ss秒)
+
+practice = Practice.new(name: "音割れ", start: Time.zone.local(2019, 10, 2, 18, 0, 0), end: Time.zone.local(2019, 10, 2, 20, 0, 0))
