@@ -11,10 +11,9 @@
 </p>
 
 <p>
-  <strong>Eventtype:</strong>
-  <% if @event.eventtype == 1 %> 学内イベント
-  <% elsif @event.eventtype == 2 %> 学外イベント
-  <% elsif @event.eventtype == 3 %> バンド練
+  <strong>Type:</strong>
+  <% if @event.eventtype == "internal" %> 学内イベント
+  <% elsif @event.eventtype == "external" %> 学外イベント
   <% else %> 未入力
   <% end %>
 </p>
@@ -30,4 +29,5 @@
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Back', events_path %> |
+<td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'イベントを削除しますか?' } %></td>

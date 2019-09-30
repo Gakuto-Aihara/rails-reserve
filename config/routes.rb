@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  resources :practices
   resources :events
   get 'events/edit'
   get 'events/show'
   get 'events/index'
+  get 'practices/edit'
+  get 'practices/show'
+  get 'practices/index'
   get 'top/about'
   root "top#index"
   get "index" => "top#index", as: "index"

@@ -3,13 +3,11 @@
 one:
   title: MyString
   about: MyText
-  eventtype: MyString
-  start: 2019-09-17 14:37:32
-  end: 2019-09-17 14:37:32
+  start: 2019-09-18 18:21:15
+  end: 2019-09-18 18:21:15
 
 two:
   title: MyString
   about: MyText
-  eventtype: MyString
-  start: 2019-09-17 14:37:32
-  end: 2019-09-17 14:37:32
+  start: 2019-09-18 18:21:15
+  end: 2019-09-18 18:21:15

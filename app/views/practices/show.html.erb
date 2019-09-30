@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bandname:</strong>
+  <%= @practice.title %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @practice.about %>
+</p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @practice.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @practice.end %>
+</p>
+
+<%= link_to 'Edit', edit_practice_path(@practice) %> |
+<%= link_to 'Back', practices_path %> |
+<td><%= link_to 'Destroy', @practice, method: :delete, data: { confirm: 'イベントを削除しますか?' } %></td>

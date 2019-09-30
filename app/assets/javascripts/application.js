@@ -49,13 +49,26 @@ $(function () {
             $(document).on('turbolinks:before-cache', clearCalendar);
 
             $('#calendar').fullCalendar({
-               events: '/events.json',   
-                header: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'month,agendaWeek,agendaDay,'
-                      },
+              header: {
+                      left: 'prev,next today',
+                      center: 'title',
+                      right: 'month,agendaWeek,agendaDay,'
+                    },
+              eventSources: [
+               {
+                  url: '/practices.json',
+                  color: 'forestgreen',
+                  textColor: 'white',
+                },
+
+                {
+                  url: '/events.json',
+                  color: 'red',
+                  textColor: 'white',
+                  }
+                            ]
             });
+
         }
     });
 });

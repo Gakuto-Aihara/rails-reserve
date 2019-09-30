@@ -6,8 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>About</th>
-      <th>Eventtype</th>
+      <th>Type</th>
       <th>Start</th>
       <th>End</th>
       <th colspan="3"></th>
@@ -18,19 +17,17 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.title %></td>
-        <td><%= event.about %></td>
         <td>
-        <% if event.eventtype == 1 %> 学内イベント
-        <% elsif event.eventtype == 2 %> 学外イベント
-        <% elsif event.eventtype == 3 %> バンド練
-        <% else %> 未入力
+        <% if event.eventtype == "internal" %> 学内イベント
+        <% elsif event.eventtype == "external" %> 学外イベント
+        <% else %> 未入力(<%= link_to 'ここ', edit_event_path(event) %>から種類を入力してください)
         <% end %>
       </td>
         <td><%= event.start %></td>
         <td><%= event.end %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'イベントを削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>

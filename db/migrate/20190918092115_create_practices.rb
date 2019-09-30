@@ -1,9 +1,8 @@
-class CreateEvents < ActiveRecord::Migration[5.2]
+class CreatePractices < ActiveRecord::Migration[5.2]
   def change
-    create_table :events do |t|
+    create_table :practices do |t|
       t.string :title
       t.text :about
-      t.integer :eventtype
       t.datetime :start
       t.datetime :end
 
