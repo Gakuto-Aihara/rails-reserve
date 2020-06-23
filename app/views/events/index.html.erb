@@ -18,8 +18,9 @@
       <tr>
         <td><%= event.title %></td>
         <td>
-        <% if event.eventtype == "internal" %> 学内イベント
-        <% elsif event.eventtype == "external" %> 学外イベント
+        <% if event.eventtype == "internal" %> 学内ライブ
+        <% elsif event.eventtype == "external" %> 学外ライブ
+        <% elsif event.eventtype == "extra" %> 特記事項
         <% else %> 未入力(<%= link_to 'ここ', edit_event_path(event) %>から種類を入力してください)
         <% end %>
       </td>

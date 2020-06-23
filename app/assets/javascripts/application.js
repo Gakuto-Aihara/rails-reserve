@@ -63,10 +63,17 @@ $(function () {
 
                 {
                   url: '/events.json',
-                  color: 'red',
+                  color: 'blue',
                   textColor: 'white',
-                  }
-                            ]
+                },
+
+                {
+                   url: '/infomations.json',
+                   color: 'red',
+                   textColor: 'white',
+
+                 },
+                ]
             });
 
         }

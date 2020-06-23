@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  resources :infomations
   resources :practices
   resources :events
+  get 'infomations/edit'
+  get 'infomations/show'
+  get 'infomations/index'
   get 'events/edit'
   get 'events/show'
   get 'events/index'

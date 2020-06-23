@@ -14,6 +14,7 @@
   <strong>Type:</strong>
   <% if @event.eventtype == "internal" %> 学内イベント
   <% elsif @event.eventtype == "external" %> 学外イベント
+  <% elsif @event.eventtype == "extra" %> 特記事項
   <% else %> 未入力
   <% end %>
 </p>
