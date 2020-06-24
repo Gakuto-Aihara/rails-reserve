@@ -56,7 +56,7 @@ class InfomationsController < ApplicationController
   def destroy
     @infomation.destroy
     respond_to do |format|
-      format.html { redirect_to infomations_url, notice: 'Infomation was successfully destroyed.' }
+      format.html { redirect_to infomations_url, notice: 'Infomation was successfully deleted.' }
       format.json { head :no_content }
     end
   end

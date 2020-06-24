@@ -22,7 +22,7 @@
         <td><%= infomation.end %></td>
         <td><%= link_to 'Show', infomation %></td>
         <td><%= link_to 'Edit', edit_infomation_path(infomation) %></td>
-        <td><%= link_to 'Destroy', infomation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', infomation, method: :delete, data: { confirm: '告知を削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -20,7 +20,7 @@
         <td>
         <% if event.eventtype == "internal" %> 学内ライブ
         <% elsif event.eventtype == "external" %> 学外ライブ
-        <% elsif event.eventtype == "extra" %> 特記事項
+        <% elsif event.eventtype == "extra" %> その他イベント
         <% else %> 未入力(<%= link_to 'ここ', edit_event_path(event) %>から種類を入力してください)
         <% end %>
       </td>
@@ -28,7 +28,7 @@
         <td><%= event.end %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'イベントを削除しますか?' } %></td>
+        <td><%= link_to 'Delete', event, method: :delete, data: { confirm: 'イベントを削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
